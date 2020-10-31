@@ -30,7 +30,7 @@ h2 {
   color: #fff;
 }
 .carouselBox {
-  height: 350px;
+  height: 380px;
 }
 .carousel img {
   height: 300px;
@@ -58,5 +58,8 @@ h2 {
   }
   .carousel-caption h2 {
     font-size: 15px;
+  }
+  .carouselBox {
+    height: 350px;
   }
 }
