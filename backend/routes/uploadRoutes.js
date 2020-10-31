@@ -1,6 +1,6 @@
-const express = require("express")
-const path = require("path")
-const multer = require("multer")
+import express from 'express'
+import path from 'path'
+import multer from 'multer'
 const router = express.Router()
 
 const storage = multer.diskStorage({
@@ -37,4 +37,4 @@ router.post('/', upload.single('image'), (req, res) =>{
 })
 
 
-module.exports = router
+export default router

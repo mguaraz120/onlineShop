@@ -1,6 +1,6 @@
-const asyncHandler = require("express-async-handler")
-const generateToken = require("../utils/generateToken")
-const User = require("../models/usermodel")
+import asyncHandler from "express-async-handler"
+import generateToken from "../utils/generateToken.js"
+import User from "../models/usermodel.js"
 
 //@desc Auth user & get token
 //@route Post /api/users/login
@@ -172,7 +172,7 @@ const user = await User.findById(req.params.id)
   }
 })
 
-module.exports = {
+export {
    authUser, 
    registerUser, 
    getUserProfile, 

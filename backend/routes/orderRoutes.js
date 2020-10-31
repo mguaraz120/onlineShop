@@ -1,15 +1,15 @@
-const express = require("express")
+import express from 'express'
 const router = express.Router()
 
-const {
+import {
     addOrderItems, 
     getOrderById,
     updateOrderToPaid,
     updateOrderToDelivered,
     getMyOrders,
     getOrders
-} = require("../controllers/orderController")
-const [protect, admin] = require("../middleware/authMiddleware")
+} from '../controllers/orderController.js'
+import {protect, admin} from '../middleware/authMiddleware.js'
 
 router.route('/')
     .post(protect, addOrderItems)
@@ -19,5 +19,4 @@ router.route('/:id').get(protect, getOrderById);
 router.route('/:id/pay').put(protect, updateOrderToPaid);
 router.route('/:id/deliver').put(protect, admin, updateOrderToDelivered);
 
-
-module.exports = router
+export default router
